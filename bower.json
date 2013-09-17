@@ -20,5 +20,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular": "~1.0.8",
+    "l20n.js": "l20n/l20n.js"
+  }
 }

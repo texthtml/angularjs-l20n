@@ -2,7 +2,7 @@ define(function (require, exports, module) {
 	'use strict';
 	
 	function thL20NContextProvider() {
-		var ctx = require('components/l20n.js/lib/l20n').getContext();
+		var ctx = require('bower_components/l20n.js/lib/l20n').getContext();
 		
 		[
 			'registerLocales', 
@@ -44,7 +44,7 @@ define(function (require, exports, module) {
 	};
 	
 	
-	require('components/angular/angular').module('thL20N', [], ['$provide', function($provide) {
+	require('bower_components/angular/angular').module('thL20N', [], ['$provide', function($provide) {
 		$provide.provider('thL20NContext', thL20NContextProvider);
 	}])
 	.directive('l20nId', ['thL20NContext', function L20NIdFactory(thL20NContext) {
