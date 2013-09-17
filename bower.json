@@ -1,0 +1,24 @@
+{
+  "name": "angularjs-l20n",
+  "main": "angularjs-l20n.js",
+  "version": "0.0.0",
+  "authors": [
+    "Mathieu Rochette <mathieu@rochette.cc>"
+  ],
+  "description": "angularjs module for l20n.js",
+  "keywords": [
+    "l20n",
+    "i18n",
+    "angularjs",
+    "l10n"
+  ],
+  "license": "aGPLv3",
+  "homepage": "https://texthtml.net/trac/projects/webapp-libraries-angularjs-l20n",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
