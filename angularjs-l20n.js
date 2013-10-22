@@ -48,7 +48,6 @@ define(function (require, exports, module) {
 		$provide.provider('thL20NContext', thL20NContextProvider);
 	}])
 	.directive('l20nId', ['thL20NContext', function L20NIdFactory(thL20NContext) {
-		window.l20nctx = thL20NContext;
 		return {
 			restrict: 'A', 
 			link: function l20nIdLinking(scope, element, attrs) {
