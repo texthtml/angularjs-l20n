@@ -55,7 +55,7 @@ define(function (require, exports, module) {
 				var updateText = function() {
 					if(attrs.l20nId !== undefined) {
 						var data = scope.$eval(attrs.l20nData), 
-							string = thL20NContext.get(attrs.l20nId, data);
+							string = thL20NContext.getSync(attrs.l20nId, data);
 						
 						if(attrs.l20nTarget === undefined) {
 							attrs.l20nTarget = 'text';
