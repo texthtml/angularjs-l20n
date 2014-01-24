@@ -19,19 +19,20 @@ define(function (require, exports, module) {
 		
 		var requestLocales = [navigator.language, navigator.language.substr(0, 2)];
 		
-		this.supportedLocales = ctx.supportedLocales;
-		
 		this.requestLocales = function() {
 			if(arguments.length) {
 				requestLocales = arguments;
 			}
 			ctx.requestLocales.apply(ctx, requestLocales);
-			this.supportedLocales = ctx.supportedLocales;
 			requestLocales = false;
 		}
 		
+		this.supportedLocales = function() {
+			return ctx.supportedLocales;
+		}
+		
 		this.$get = ['$rootScope', function($rootScope) {
-			ctx.addEventListener('ready', function() {
+			ctx.ready(function() {
 				$rootScope.$emit('l20n.ready');
 			});
 			
