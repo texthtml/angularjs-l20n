@@ -1,7 +1,7 @@
-define(function (require, exports, module) {
+define(function (require) {
 	'use strict';
 	
-	function thL20NContextProvider() {
+	var L20NContextProvider = function() {
 		var ctx = require('bower_components/l20n.js/lib/l20n').getContext();
 		
 		[
@@ -25,11 +25,11 @@ define(function (require, exports, module) {
 			}
 			ctx.requestLocales.apply(ctx, requestLocales);
 			requestLocales = false;
-		}
+		};
 		
 		this.supportedLocales = function() {
 			return ctx.supportedLocales;
-		}
+		};
 		
 		this.$get = ['$rootScope', function($rootScope) {
 			ctx.ready(function() {
@@ -46,7 +46,7 @@ define(function (require, exports, module) {
 	
 	
 	require('bower_components/angular/angular').module('thL20N', [], ['$provide', function($provide) {
-		$provide.provider('thL20NContext', thL20NContextProvider);
+		$provide.provider('thL20NContext', L20NContextProvider);
 	}])
 	.directive('l20nId', ['thL20NContext', function L20NIdFactory(thL20NContext) {
 		return {
@@ -83,6 +83,6 @@ define(function (require, exports, module) {
 					updateText();
 				});
 			}
-		}
+		};
 	}]);
 });
