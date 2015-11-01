@@ -16,6 +16,6 @@
   "homepage": "https://texthtml.net/trac/projects/webapp-libraries-angularjs-l20n",
   "dependencies": {
     "angular": "~1.0.8",
-    "l20n.js": "l20n/l20n.js"
+    "l20n.js": "git+https://github.com/l20n/l20n.js#v1.0.5"
   }
 }
